@@ -5,6 +5,8 @@ namespace App\Http\Controllers\JobQuery;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use Carbon\Carbon;
+use function GuzzleHttp\Psr7\str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Yajra\DataTables\Facades\DataTables;
@@ -43,8 +45,8 @@ class JobQueryController extends Controller
                 ->addColumn('title', function ($query){
                     return $query->title;
                 })
-                ->addColumn('description', function ($query){
-                    return $query->desciption;
+                ->addColumn('job_date', function ($query){
+                    return $query->job_date;
                 })
                 ->addColumn('user_id', function ($query){
                     return User::find($query->user_id)->name;
@@ -63,6 +65,10 @@ class JobQueryController extends Controller
                 })
                 ->addColumn('actions', function ($q) use ($request) {
                     $view = "";
+                    $assign = view('backend.datatable.action-assign')
+                        ->with(['route' => asset('requetes/job-query/'.$q->id),'label' => 'jobquery'])
+                        ->render();
+                    $view .= $assign;
                     $show = view('backend.datatable.action-view')
                         ->with(['route' => asset('requetes/job-query/'.$q->id),'label' => 'jobquery'])
                         ->render();
@@ -73,7 +79,7 @@ class JobQueryController extends Controller
                     $view .= $edit;
 
                     $delete = view('backend.datatable.action-delete')
-                        ->with(['route' => asset('jobquery/'.$q->id),'label' => ' jobquery'])
+                        ->with(['route' => asset('requetes/jobquery/'.$q->id),'label' => ' jobquery'])
                         ->render();
                     $view .= $delete;
 
@@ -117,7 +123,8 @@ class JobQueryController extends Controller
 		]);
         $requestData = $request->all();
         $requestData['user_id'] = Auth::user()->id;
-
+        $requestData['job_date'] = (string) Carbon::createFromFormat('m/d/Y', $requestData['job_date'])->format('Y-m-d');
+//        dd($requestData);
         JobQuery::create($requestData);
 
         return redirect('requetes/job-query')->with('message', 'JobQuery added!');

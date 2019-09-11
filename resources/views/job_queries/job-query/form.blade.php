@@ -8,6 +8,11 @@
     {!! Form::textarea('description', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control']) !!}
     {!! $errors->first('description', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group {{ $errors->has('job_date') ? 'has-error' : ''}}">
+ {!! Form::label('job_date', 'Date', ['class' => 'control-label']) !!}
+ {!! Form::text('job_date', null, ('' == 'required') ? ['class' => 'form-control', 'id'=>'datetimepicker', 'required' => 'required'] : ['class' => 'form-control',  'id'=>'datetimepicker']) !!}
+ {!! $errors->first('job_date', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group {{ $errors->has('user_price') ? 'has-error' : ''}}">
     {!! Form::label('user_price', 'User Price', ['class' => 'control-label']) !!}
     {!! Form::number('user_price', null, ('' == 'required') ? ['class' => 'form-control', 'required' => 'required'] : ['class' => 'form-control']) !!}

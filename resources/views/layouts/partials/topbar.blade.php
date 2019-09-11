@@ -6,7 +6,7 @@
                 <a class="navbar-brand" href="{{asset('/')}}">
                     <img src="{{asset('assets/images/logo-icon.png')}}" alt="logo">
                     <span class="ml-2">
-                                <img src="{{asset('assets/images/logo-text.png')}}" align="logo">
+                                {{--<img src="{{asset('assets/images/logo-text.png')}}" align="logo">--}}
                             </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"

@@ -6,7 +6,7 @@
 @endsection
 
 @push('before-css')
-
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">
 @endpush
 @section('content')
     <div class="container-fluid">
@@ -39,3 +39,12 @@
         </div>
     </div>
 @endsection
+@push('js')
+    <script src="{{asset('assets/libs/moment/moment.js')}}"></script>
+    <script src="{{asset('assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
+    <script>
+        jQuery('#datetimepicker').datepicker({
+            todayHighlight: true
+        });
+    </script>
+@endpush

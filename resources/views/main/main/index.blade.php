@@ -46,7 +46,7 @@
                             <div class="col-lg-3 col-md-6">
                                 <div class="d-flex p-3">
                                     <div>
-                                        <i class="text-white op-7" data-feather="cloud"></i>
+                                        <i class="text-white op-7" data-feather="shield"></i>
                                         <span class="text-white op-7 d-block my-3">Profit</span>
                                         <h3 class="text-white mb-0">5,600</h3>
                                     </div>
@@ -59,7 +59,7 @@
                             <div class="col-lg-3 col-md-6">
                                 <div class="d-flex p-3">
                                     <div>
-                                        <i class="text-white op-7" data-feather="briefcase"></i>
+                                        <i class="text-white op-7" data-feather="user-plus"></i>
                                         <span class="text-white op-7 d-block my-3">Nouveaux utilisateurs</span>
                                         <h3 class="text-white mb-0">180</h3>
                                     </div>

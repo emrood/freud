@@ -2,7 +2,7 @@
 @section('title') {{ 'Jobquery | '.env('APP_NAME') }} @endsection
 
 @section('breadcrumbs')
-    @include('backend.layouts.partials.breadcrumbs',['current' => 'Jobquery'])
+    @include('backend.layouts.partials.breadcrumbs',['current' => 'Requetes'])
 @endsection
 
 @push('before-css')
@@ -18,7 +18,7 @@
                         <div class="d-block text-center">
                             <a href="{{ url('/requetes/job-query/create') }}" class="btn btn-success btn-sm"
                                title="Add New JobQuery">
-                                <i class="fa fa-plus" aria-hidden="true"></i> Add New
+                                <i class="fa fa-plus" aria-hidden="true"></i> Nouveau
                             </a>
                         </div>
 
@@ -29,7 +29,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Titre</th>
-                                    <th>Description</th>
+                                    <th>Date</th>
                                     <th>Utilisateur</th>
                                     <th>Prix utilisateur</th>
                                     <th>Prix administrateur</th>
@@ -95,7 +95,7 @@
             columns: [
                 {data: 'id', name: 'id'},
                 {data: 'title', name: 'title'},
-                {data: 'description', name: 'description'},
+                {data: 'job_date', name: 'job_date'},
                 {data: 'user_id', name: 'user_id'},
                 {data: 'user_price', name: 'user_price'},
                 {data: 'admin_price', name: 'admin_price'},
