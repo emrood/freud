@@ -27,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/main/main';
 
     /**
      * Create a new controller instance.
@@ -46,9 +46,9 @@ class LoginController extends Controller
             ->causedBy($user)
             ->log('LoggedIn');
         if($user->isAdmin()){
-            return redirect('dashboard');
+            return redirect('main/main');
         }
-        return redirect('/');
+        return redirect('/login');
     }
 
     public function logout(Request $request)
@@ -60,6 +60,6 @@ class LoginController extends Controller
             ->log('LoggedOut');
         $this->guard()->logout();
         $request->session()->invalidate();
-        return redirect('/');
+        return redirect('/login');
     }
 }

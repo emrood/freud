@@ -1,1 +1,1 @@
-{"menus":[{"section":"Modules","items":[{"title":"JobQuery","icon":"fas fa-briefcase","url":"\/requetes\/job-query"}]}]}
+{"menus":[{"section":"Modules","items":[{"title":"Main","icon":"fas fa-home","url":"\/main\/main"},{"title":"JobQuery","icon":"fas fa-briefcase","url":"\/requetes\/job-query"}]}]}

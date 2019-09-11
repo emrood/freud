@@ -12,8 +12,8 @@
         <div class="auth-box">
             <div id="loginform">
                 <div class="logo">
-                    <span class="db"><img src="{{asset('assets/images/logo-icon.png')}}" alt="logo" /></span>
-                    <h5 class="font-medium m-b-20">Sign In to Mendy Admin</h5>
+                    {{--<span class="db"><img src="{{asset('assets/images/test.png')}}" alt="logo" /></span>--}}
+                    <h5 class="font-medium m-b-20">Se connecter</h5>
                 </div>
                 <!-- Form -->
                 <div class="row">
@@ -53,36 +53,34 @@
 
 
                                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} class="custom-control-input" id="remember">
-                                        <label class="custom-control-label" for="customCheck1">Remember me</label>
+                                        <label class="custom-control-label" for="customCheck1">Se souvenir de moi</label>
                                         @if (Route::has('password.request'))
                                         <a href="{{ route('password.request') }}" id="to-recover" class="text-dark float-right"><i
-                                                    class="fa fa-lock m-r-5"></i> Forgot pwd?</a>
+                                                    class="fa fa-lock m-r-5"></i> Mot de passe oublié?</a>
                                         @endif
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group text-center">
                                 <div class="col-xs-12 p-b-20">
-                                    <button class="btn btn-block btn-lg bg-gradient-primary text-white" type="submit">Log
-                                        In</button>
+                                    <button class="btn btn-block btn-lg bg-gradient-primary text-white" type="submit">Se connecter</button>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-                                    <div class="social">
-                                        <a href="{{url('auth/facebook')}}"  class="btn  btn-facebook" data-toggle="tooltip"
-                                           title="" data-original-title="Login with Facebook"> <i aria-hidden="true"
-                                                                                                  class="fab  fa-facebook"></i> </a>
-                                        <a href="{{url('auth/google')}}"  class="btn btn-googleplus" data-toggle="tooltip"
-                                           title="" data-original-title="Login with Google"> <i aria-hidden="true"
-                                                                                                class="fab  fa-google-plus"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
+                            {{--<div class="row">--}}
+                                {{--<div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">--}}
+                                    {{--<div class="social">--}}
+                                        {{--<a href="{{url('auth/facebook')}}"  class="btn  btn-facebook" data-toggle="tooltip"--}}
+                                           {{--title="" data-original-title="Login with Facebook"> <i aria-hidden="true"--}}
+                                                                                                  {{--class="fab  fa-facebook"></i> </a>--}}
+                                        {{--<a href="{{url('auth/google')}}"  class="btn btn-googleplus" data-toggle="tooltip"--}}
+                                           {{--title="" data-original-title="Login with Google"> <i aria-hidden="true"--}}
+                                                                                                {{--class="fab  fa-google-plus"></i> </a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                             <div class="form-group m-b-0 m-t-10">
                                 <div class="col-sm-12 text-center">
-                                    Don't have an account? <a href="{{asset('register')}}" class="text-info m-l-5"><b>Sign
-                                            Up</b></a>
+                                    Pas encore de compte? <a href="{{asset('register')}}" class="text-info m-l-5"><b>En creer un</b></a>
                                 </div>
                             </div>
                         </form>

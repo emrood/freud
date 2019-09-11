@@ -61,15 +61,15 @@
                                         </div>
                                     </div>
                                     <div class="profile-dis scrollable">
-                                        <a class="dropdown-item" href="{{'/dashboard'}}">
-                                            <i class="fa fa-dashboard mx-1"></i> My Dashboard</a>
+                                        <a class="dropdown-item" href="{{'/main/main'}}">
+                                            <i class="fa fa-dashboard mx-1"></i>Tableau de bord</a>
                                         <a class="dropdown-item" href="{{asset('logout')}}">
-                                            <i class="fa fa-power-off mx-1"></i> Logout</a>
+                                            <i class="fa fa-power-off mx-1"></i> Déconnexion</a>
                                     </div>
                                 </div>
 
                             @else
-                                <a class="nav-link waves-effect waves-dark pro-pic" href="{{asset('login')}}" >LogIn</a>
+                                <a class="nav-link waves-effect waves-dark pro-pic" href="{{asset('login')}}" >Se connecter</a>
                             @endif
                         </li>
                     </ul>

@@ -8,10 +8,10 @@
             <div id="recoverform" class="d-block">
                 <div class="logo">
                     <a href="{{asset('/')}}">
-                    <span class="db"><img src="{{asset('assets/images/logo-icon.png')}}" alt="logo"/></span>
-                    <h5 class="font-medium m-b-20">Recover Password</h5>
+                    {{--<span class="db"><img src="{{asset('assets/images/logo-icon.png')}}" alt="logo"/></span>--}}
+                    <h5 class="font-medium m-b-20">Récupération de mot de passe</h5>
                     </a>
-                    <span>Enter your Email and instructions will be sent to you!</span>
+                    <span>Entrez votre email et les instructions vous seront envoyées!</span>
 
                 </div>
                 <div class="row m-t-20">

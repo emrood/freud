@@ -12,8 +12,8 @@
                 <div class="logo">
                     <a href="{{asset('/')}}">
 
-                        <span class="d-block"><img src="{{asset('assets/images/logo-icon.png')}}" alt="logo" /></span>
-                    <h5 class="font-medium mb-3">Recover Password</h5>
+                        {{--<span class="d-block"><img src="{{asset('assets/images/logo-icon.png')}}" alt="logo" /></span>--}}
+                    <h5 class="font-medium mb-3">Récupération de mot de passe</h5>
                     </a>
                 </div>
                 <!-- Form -->
@@ -36,7 +36,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-12">
-                                    <input id="password" type="password" class="form-control form-control-lg   @error('password') is-invalid @enderror" placeholder="New Password" name="password" required autocomplete="new-password">
+                                    <input id="password" type="password" class="form-control form-control-lg   @error('password') is-invalid @enderror" placeholder="Nouveau mot de passe" name="password" required autocomplete="new-password">
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -47,7 +47,7 @@
 
                             <div class="form-group row">
                                 <div class="col-12">
-                                    <input id="password_confirmation" type="password" class="form-control form-control-lg   @error('password') is-invalid @enderror" placeholder="Old Password" name="password_confirmation" required autocomplete="new-password">
+                                    <input id="password_confirmation" type="password" class="form-control form-control-lg   @error('password') is-invalid @enderror" placeholder="Ancien mot de passe" name="password_confirmation" required autocomplete="new-password">
 
                                 </div>
                             </div>

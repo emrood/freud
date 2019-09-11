@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png')}}">
-    <title>@yield('title','Mendy Admin Template')</title>
+    <title>@yield('title','Go-Tech Admin Template')</title>
 
 @stack('before-css')
 

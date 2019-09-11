@@ -483,3 +483,5 @@ Route::get('/sample','FrontEndController@getSample');
 
 Route::get('requetes/job-query/get-data','JobQuery\\JobQueryController@getData');
 Route::resource('requetes/job-query', 'JobQuery\\JobQueryController');
+Route::get('main/main/get-data','Main\\MainController@getData');
+Route::resource('main/main', 'Main\\MainController');
